@@ -58,6 +58,7 @@ img{
 	font-size: 0.32rem;
 	font-weight: bold;
 	cursor: pointer;
+	padding-left: 0.12rem;
 }
 .btnBox .btn1{
 	width: 1.77rem;
@@ -150,7 +151,7 @@ img{
 }
 #choseBox .bg .pattern{
 	position: absolute;
-	top: 9rem;
+	bottom: -2rem;
 	right: 0;
 	width: 3.17rem;
 }
