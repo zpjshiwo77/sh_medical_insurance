@@ -202,6 +202,8 @@ $(document).ready(function () {
 		var tableTtile = resultBox.find(".tableBox .title1");
 		var tableBox = resultBox.find(".tableBox");
 		var tableItem = resultBox.find(".row .item");
+		var tipsA = resultBox.find(".tipsA");
+		var tipsB = resultBox.find(".tipsB");
 		
 		if(type == "尿路上皮癌/经典霍奇金淋巴瘤"){
 			title.show();
@@ -215,11 +217,11 @@ $(document).ready(function () {
 			costTips.show();
 			costBox.html(`<div class="row">
 							<div class="col">医保报销</div>
-							<div class="col">${category=='城镇职工'?cityData.costR1:cityData.costR2}</div>
+							<div class="col">${category=='城镇职工'?cityData.costRC:cityData.costRX}</div>
 						</div>
 						<div class="row">
 							<div class="col">个人自费</div>
-							<div class="col">${category=='城镇职工'?cityData.costS1:cityData.costS2}</div>
+							<div class="col">${category=='城镇职工'?cityData.costSC:cityData.costSX}</div>
 						</div>`)
 
 			tableBox.show();
@@ -227,6 +229,9 @@ $(document).ready(function () {
 			tableItem.each(function(index,ele){
 				if(index % 4 != 0) $(ele).text(cityData.detail[index - (parseInt(index / 4) + 1)])
 			})
+
+			tipsA.show();
+			tipsB.hide();
 		}
 		else{
 			title.hide();
@@ -238,10 +243,13 @@ $(document).ready(function () {
 			costTips.hide();
 			costBox.html(`<div class="row">
 							<div class="col">个人自费</div>
-							<div class="col">${cityData.costS3}</div>
+							<div class="col">${cityData.costS}</div>
 						</div>`)
 
 			tableBox.hide();
+
+			tipsA.hide();
+			tipsB.show();
 		}
 	}
 

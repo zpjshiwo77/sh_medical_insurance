@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>百泽安&reg;医保计算器</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+</head>
+<body>
+
+<script src="js/base/jquery.js"></script>
+<script src="js/plugs/data.js"></script>
+<script src="js/plugs/cdata.js"></script>
+<script>
+    for (let i = 0; i < data.length; i++) {
+        let ele = data[i]
+        for (let j = 0; j < costData.length; j++) {
+            let pData = costData[j]
+            if(ele['省份'] == pData['label']){
+                for (let k = 0; k < pData.children.length; k++) {
+                    let cData = pData.children[k];
+                    if(ele['城市'] == cData['label'] && ele['参保类别'] == '城镇职工'){
+                        if(ele['医保报销'] != "") cData.costRC = ele['医保报销']
+                        if(ele['个人自费'] != "") cData.costSC = ele['个人自费']
+                    }
+                    else if(ele['城市'] == cData['label'] && ele['参保类别'] == '城乡居民'){
+                        if(ele['医保报销'] != "") cData.costRX = ele['医保报销']
+                        if(ele['个人自费'] != "") cData.costSX = ele['个人自费']
+                    }
+                }
+            }
+        }
+    }
+    console.log(costData)
+    let item = JSON.stringify(costData)
+    console.log(item)
+</script>
+</body>
+</html>

@@ -47,7 +47,7 @@ aside{
     height: 100%;
 }
 img{
-	/* pointer-events: none; */
+	pointer-events: none;
 }
 .btnBox .btn{
 	height: 0.86rem;
@@ -111,15 +111,16 @@ img{
 	color: #fff;
 }
 .tipsBox p{
-	line-height: 1.5;
-	font-size: 0.16rem;
-	padding-bottom: 0.15rem;
+	line-height: 1.8;
+	font-size: 0.15rem;
+	padding-bottom: 0.1rem;
+	padding-right: 1.4rem;
 }
 .tipsBox p span{
-	font-size: 0.18rem;
+	font-size: 0.17rem;
 }
 .tipsBox p a{
-	font-size: 0.16rem;
+	font-size: 0.14rem;
 	color: #fff;
 }
 .tipsBox p.sp{
@@ -151,7 +152,7 @@ img{
 }
 #choseBox .bg .pattern{
 	position: absolute;
-	bottom: -2rem;
+	bottom: -2.3rem;
 	right: 0;
 	width: 3.17rem;
 }
@@ -173,6 +174,11 @@ img{
 	padding-left: 0.35rem;
 	line-height: 1.5;
 	position: relative;
+}
+#choseBox .introBox .word span{
+	font-size: 0.3rem;
+	font-weight: bold;
+	letter-spacing: 0.01rem;
 }
 #choseBox .introBox .word::before{
 	content: "";
@@ -265,7 +271,7 @@ img{
 }
 #resultBox .pattern{
 	position: absolute;
-	bottom: -2rem;
+	bottom: -2.2rem;
 	right: 0;
 	width: 3.17rem;
 }
@@ -276,13 +282,16 @@ img{
 	position: relative;
 	z-index: 2;
 }
+#resultBox .cont .title{
+	padding-bottom: 0.45rem;
+}
 #resultBox .cont .title .t1,#resultBox .cont .title .t2{
 	font-size: 0.63rem;
 }
 #resultBox .cont .introBox{
 	width: 100%;
 	height: auto;
-	padding: 0.45rem 0.1rem 0.3rem;
+	padding: 0 0.1rem 0.3rem;
 }
 #resultBox .cont .introBox .row{
 	width: 100%;
@@ -304,7 +313,7 @@ img{
 	position: relative;
 	font-size: 0.2rem;
 	color: #fff;
-	line-height: 1.4;
+	line-height: 1.8;
 	padding-left: 0.15rem;
 }
 #resultBox .cont .introBox .row .word:before{
@@ -355,7 +364,7 @@ img{
 	border-bottom: none;
 }
 #resultBox .cont .costBox .table .row .col{
-	font-size: 0.3rem;
+	font-size: 0.26rem;
 	padding: 0.1rem 0.05rem;
 }
 #resultBox .cont .costBox .table .row .col:first-child{
@@ -472,22 +481,23 @@ img{
 #resultBox .cont .codeBox{
 	width: 100%;
 	text-align: center;
-	margin: 0.2rem 0;
+	margin: 0.4rem 0 0.2rem;
 }
 #resultBox .cont .codeBox .code{
 	width: 1.85rem;
+	pointer-events: auto;
 }
 #resultBox .cont .codeBox .tips{
 	color: #fff;
 	font-size: 0.2rem;
-	line-height: 1.5;
+	line-height: 1.8;
 	padding-top: 0.2rem;
 }
 #resultBox .cont .btnBox{
 	width: 100%;
 }
 #resultBox .cont .btnBox .btn{
-	margin: 0.1rem auto 0.5rem;
+	margin: 0.1rem auto 0.4rem;
 }
 /* resultBox end */
 /*---------------------------------------- 15:9 ----------------------*/
